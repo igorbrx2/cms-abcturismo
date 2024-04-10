@@ -1,74 +1,11 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ABC Turismo Pedagógico</title>
-    <link rel="stylesheet" href="./css/reset.min.css" />
-    <link rel="stylesheet" href="./css/style.min.css" />
-    <link rel="stylesheet" href="./css/color.min.css" />
+<?php
+// Template Name: Home
+?>
 
-    <!-- FONTES -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
-      rel="stylesheet"
-    />
-    <!-- FIM DE FONTES -->
-  </head>
-  <body class="pg-inicio">
-    <!-- HEADER -->
-    <header id="header">
-      <a id="logo" href="./"><img src="./imgs/logo.png" alt="" /></a>
-      <nav id="navegacao">
-        <ul id="menu">
-          <li>
-            <a
-              href="./index.html"
-              >INICIO</a
-            >
-          </li>
-          <li><a href="./sobre.html">SOBRE</a></li>
-          <li><a href="./pacotes.html">PACOTES</a></li>
-          <li><a href="./blog.html">BLOG</a></li>
-        </ul>
-      </nav>
-
-      <ul class="rd-sociais">
-        <li>
-          <a
-            href="https://api.whatsapp.com/send/?phone=5584988075272&text&type=phone_number&app_absent=0"
-            target="_blank"
-            ><img src="./imgs/wpp.png" alt=""
-          /></a>
-        </li>
-        <li>
-          <a
-            href="https://www.instagram.com/abcturismopedagogico/"
-            target="_blank"
-            ><img src="./imgs/ig.png" alt=""
-          /></a>
-        </li>
-        <li>
-          <a
-            href="https://www.threads.net/@abcturismopedagogico"
-            target="_blank"
-            ><img src="./imgs/thds.png" alt=""
-          /></a>
-        </li>
-      </ul>
-
-      <!-- botao mobile -->
-      <div class="btn-mobile">
-        <div class="line1"></div>
-        <div class="line2"></div>
-        <div class="line3"></div>
-      </div>
-      <!-- botao mobile -->
-    </header>
-    <!-- FIM DE HEADER -->
-
+    <!-- get header php -->
+    <?php get_header(); ?>
+    <!-- het header php -->
+    
     <!-- INTRODUÇÃO -->
     <section id="intro">
       <h1>ABC TURISMO PEDAGÓGICO</h1>
@@ -85,27 +22,14 @@
     </section>
     <!-- FIM DA INTRODUÇÃO -->
 
-    <!-- BOTÃO WHATSAPP  -->
-    <button class="btn-wpp">
-      <a href="https://api.whatsapp.com/send/?phone=5584988075272&text&type=phone_number&app_absent=0" target="_blank">
-        <div class="botao-zap">
-          <img
-            src="./imgs/wpp-maior.png"
-            alt="Entre em contato pelo whatsapp"
-          />
-        </div>
-      </a>
-    </button>
-    <!-- FIM DO BOTÃO WHATSAPP -->
-
     <!-- RESERVE JÁ! -->
     <article id="reserve-ja" class="carousel-container">
       <h1 class="titulo-laranja">RESERVE JÁ!</h1>
       <div id="crsl-pcts" class="carousel">
-        <a href="./pacotes.html">
+        <a href="/pacotes/">
           <div class="pct-item">
             <h2>Dia das Mães<br />Hotel Thermas</h2>
-            <img src="./imgs/thermas.jpg" alt="" />
+            <img src="<?php echo get_stylesheet_directory_uri(); ?>/imgs/thermas.jpg" alt="" />
             <p class="a-partir-de">A partir de <strong>R$ 469,00</strong></p>
             <p>
               - Transporte categoria turismo<br />
@@ -118,10 +42,10 @@
           </div>
         </a>
 
-        <a href="./pacotes.html">
+        <a href="/pacotes/">
           <div class="pct-item center">
             <h2>PORTO DE GALINHAS<br />BATE-VOLTA</h2>
-            <img src="./imgs/port-de-galinhas.webp" alt="" />
+            <img src="<?php echo get_stylesheet_directory_uri(); ?>/imgs/port-de-galinhas.webp" alt="" />
             <p class="a-partir-de">A partir de <strong>R$ 199,00</strong></p>
             <p>
               - Transporte categoria turismo<br />
@@ -132,10 +56,10 @@
           </div>
         </a>
 
-        <a href="./pacotes.html">
+        <a href="/pacotes/">
           <div class="pct-item">
             <h2>Pingo da Mei Dia<br />Mossoró</h2>
-            <img src="./imgs/pingo-mei-dia.png" alt="" />
+            <img src="<?php echo get_stylesheet_directory_uri(); ?>/imgs/pingo-mei-dia.png" alt="" />
             <p class="a-partir-de">A partir de <strong>R$ 589,00</strong></p>
             <p>
               - Transporte categoria turismo<br />
@@ -157,17 +81,17 @@
       <ul class="depoimentos">
         <li>
           <a href="" class="depo-foto" data-click="wil"
-            ><img src="./imgs/Wil.jpg" alt="" />Wil Silva</a
+            ><img src="<?php echo get_stylesheet_directory_uri(); ?>/imgs/Wil.jpg" alt="" />Wil Silva</a
           >
         </li>
         <li>
           <a href="" class="depo-foto" data-click="igor"
-            ><img src="./imgs/Igor.jpg" alt="" />Igor Gomes</a
+            ><img src="<?php echo get_stylesheet_directory_uri(); ?>/imgs/Igor.jpg" alt="" />Igor Gomes</a
           >
         </li>
         <li>
           <a href="" class="depo-foto" data-click="jp"
-            ><img src="./imgs/JP.jpg" alt="" />João Paulo</a
+            ><img src="<?php echo get_stylesheet_directory_uri(); ?>/imgs/JP.jpg" alt="" />João Paulo</a
           >
         </li>
       </ul>
@@ -198,7 +122,7 @@
       <h1 class="titulo-azul">ÚLTIMO POST</h1>
 
       <div class="ultimo-post">
-        <img src="./imgs/pingo-mei-dia.png" alt="" />
+        <img src="<?php echo get_stylesheet_directory_uri(); ?>/imgs/pingo-mei-dia.png" alt="" />
         <div class="ctd-post">
           <h2>O Pingo da Mei Dia: A festa que ilumina Mossoró</h2>
           <p>
@@ -208,31 +132,12 @@
             dessa cidade, é o "Pingo da Mei Dia". Imagine uma tarde quente de
             junho...
           </p>
-          <a href="./blog-post.html">+ Leia mais</a>
+          <a href="/blog-post/">+ Leia mais</a>
         </div>
       </div>
     </section>
     <!-- FIM DO BLOG -->
 
-    <!-- FOOTER -->
-    <footer id="footer">
-      <div id="ftr-ld-esq">
-        <img src="./imgs/logo.png" alt="" />
-        <div>
-          <p><strong>Tel</strong>:</p>
-          <p>+55 84 98807-5272</p>
-          <p class="CNPJ"><strong>CNPJ</strong>: 45.521.987/0001-28</p>
-        </div>
-      </div>
-      <div id="ftr-ld-dir">
-        <h2>links úteis</h2>
-        <a href="./">> Registro legal</a>
-        <a href="./">> Email para parceria</a>
-        <p>Desenvolvido pela Poti Comunicação.</p>
-      </div>
-    </footer>
-    <!-- FIM DE FOOTER -->
-    <script src="./jquery.js"></script>
-    <script src="./script.min.js"></script>
-  </body>
-</html>
+        <!-- get footer php -->
+        <?php get_footer(); ?>
+    <!-- het footer php -->

@@ -1,36 +1,16 @@
+/*
+Theme Name: ABC Turismo Pedagógico
+Theme URI: http://abcturismopedagogico.com.br
+Author: Igor Gomes
+Author URI: http://igorbrx2.github.io
+Description: Tema criado para a agência de turismo ABC Turismo Pedagógico
+Version: 1.0
+*/
+
 
 /* BOTOES DO HEADER POR PÁGINA*/
 
-.pg-inicio #menu li:nth-child(1) a {
-
-color: var(--branco-puro);
-background-color: var(--azul-links);
-border-radius: 5px;
-padding: 10px 15px;
-}
-
-.pg-sobre #menu li:nth-child(2) a {
-color: var(--branco-puro);
-background-color: var(--azul-links);
-border-radius: 5px;
-padding: 10px 15px;
-}
-
-.pg-pacotes #menu li:nth-child(3) a {
-color: var(--branco-puro);
-background-color: var(--azul-links);
-border-radius: 5px;
-padding: 10px 15px;
-}
-
-.pg-blog #menu li:nth-child(4) a {
-color: var(--branco-puro);
-background-color: var(--azul-links);
-border-radius: 5px;
-padding: 10px 15px;
-}
-
-.pg-blog-post #menu li:nth-child(4) a {
+.destaque {
 color: var(--branco-puro);
 background-color: var(--azul-links);
 border-radius: 5px;
@@ -90,7 +70,7 @@ padding: 10px 15px;
 
 /* INTRODUÇÃO */
 #intro {
-  background: url(../imgs/foto-intro-desfocada.png) no-repeat 50% 80%;
+  background: url(./imgs/foto-intro-desfocada.png) no-repeat 50% 80%;
   background-size: cover;
   height: 500px;
   padding-top: 64px;
@@ -483,7 +463,7 @@ padding: 10px 15px;
   width: 100%;
   height: 300px;
   padding-top: 64px;
-  background: url(../imgs/pico-do-cabugi-sobre-desfocado.jpg) no-repeat 50% 40%;
+  background: url(./imgs/pico-do-cabugi-sobre-desfocado.jpg) no-repeat 50% 40%;
   background-size: cover;
 }
 /* FIM DE TITULO DA PÁGINA */
@@ -585,7 +565,7 @@ padding: 10px 15px;
   width: 100%;
   height: 300px;
   padding-top: 64px;
-  background: url(../imgs/madero-pacotes.png) no-repeat 50% 40%;
+  background: url(./imgs/madero-pacotes.png) no-repeat 50% 40%;
   background-size: cover;
 }
 
@@ -764,7 +744,7 @@ padding: 10px 15px;
   width: 100%;
   height: 300px;
   padding-top: 64px;
-  background: url(../imgs/mulher-lendo-blog.jpg) no-repeat 50% 40%;
+  background: url(./imgs/mulher-lendo-blog.jpg) no-repeat 50% 40%;
   background-size: cover;
 }
 

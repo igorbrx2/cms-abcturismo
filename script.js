@@ -1,3 +1,38 @@
+// MUDAR BOTOES DO MENU DE ACORDO COM A PÁGINA QUE ESTÁ
+
+  // Obtém o caminho da URL atual
+  var path = window.location.pathname;
+
+  // Obtém o nome da página atual a partir do caminho da URL
+  var currentPage = path.split('/').pop();
+
+  // Obtém o elemento do botão do header correspondente à página atual
+  var button;
+
+  switch (currentPage) {
+    case 'home':
+      button = document.querySelector('#menu li:nth-child(1) a');
+      break;
+    case 'sobre':
+      button = document.querySelector('#menu li:nth-child(2) a');
+      break;
+    case 'pacotes':
+      button = document.querySelector('#menu li:nth-child(3) a');
+      break;
+    case 'blog':
+      button = document.querySelector('#menu li:nth-child(4) a');
+      break;
+    default:
+      // Se a página atual não corresponder a nenhuma das páginas conhecidas, não faz nada
+      break;
+  }
+
+  // Adiciona a classe de destaque ao botão da página atual
+  if (button) {
+    button.classList.add('destaque');
+  }
+
+
 // EVIDENCIAR AO CLICAR (DEPOIMENTOS, PACOTES ETC)
 
 $("[data-group]").each(function () {

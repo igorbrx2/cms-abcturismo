@@ -1,95 +1,17 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ABC Turismo Pedagógico</title>
-    <link rel="stylesheet" href="./css/reset.min.css" />
-    <link rel="stylesheet" href="./css/style.min.css" />
-    <link rel="stylesheet" href="./css/color.min.css" />
+<?php
+// Template Name: Pacotes
+?>
 
-    <!-- FONTES -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
-      rel="stylesheet"
-    />
-    <!-- FIM DE FONTES -->
-  </head>
-  <body class="pg-pacotes">
-    <!-- HEADER -->
-    <header id="header">
-      <a id="logo" href="./"><img src="./imgs/logo.png" alt="" /></a>
-      <nav id="navegacao">
-        <ul id="menu">
-          <li><a href="./index.html">INICIO</a></li>
-          <li><a href="./sobre.html">SOBRE</a></li>
-          <li>
-            <a
-              href="./pacotes.html"
-              >PACOTES</a
-            >
-          </li>
-          <li><a href="./blog.html">BLOG</a></li>
-        </ul>
-      </nav>
 
-      <ul class="rd-sociais">
-        <li>
-          <a
-            href="https://api.whatsapp.com/send/?phone=5584988075272&text&type=phone_number&app_absent=0"
-            target="_blank"
-            ><img src="./imgs/wpp.png" alt=""
-          /></a>
-        </li>
-        <li>
-          <a
-            href="https://www.instagram.com/abcturismopedagogico/"
-            target="_blank"
-            ><img src="./imgs/ig.png" alt=""
-          /></a>
-        </li>
-        <li>
-          <a
-            href="https://www.threads.net/@abcturismopedagogico"
-            target="_blank"
-            ><img src="./imgs/thds.png" alt=""
-          /></a>
-        </li>
-      </ul>
-
-      <!-- botao mobile -->
-      <div class="btn-mobile">
-        <div class="line1"></div>
-        <div class="line2"></div>
-        <div class="line3"></div>
-      </div>
-      <!-- botao mobile -->
-    </header>
-    <!-- FIM DE HEADER -->
+<!-- get header php -->
+<?php get_header(); ?>
+<!-- get header php -->
 
     <!-- IMAGEM DE PACOTES -->
     <section id="pacotes-titulo">
       <h1 class="titulo-paginas">PACOTES</h1>
     </section>
     <!-- FIM DE IMAGEM DE PACOTES -->
-
-    <!-- BOTÃO WHATSAPP  -->
-    <button class="btn-wpp">
-      <a
-        href="https://api.whatsapp.com/send/?phone=5584988075272&text&type=phone_number&app_absent=0"
-        target="_blank"
-      >
-        <div class="botao-zap">
-          <img
-            src="./imgs/wpp-maior.png"
-            alt="Entre em contato pelo whatsapp"
-          />
-        </div>
-      </a>
-    </button>
-    <!-- FIM DO BOTÃO WHATSAPP -->
 
     <!-- PACOTES EM EVIDÊNCIA -->
     <div id="pct-principal" data-group="evidencia">
@@ -99,11 +21,11 @@
         <div class="container-principal">
           <div class="ft-preco-data">
             <div class="pct-princ-img">
-              <img src="./imgs/thermas.jpg" alt="" />
+              <img src="<?php echo get_stylesheet_directory_uri(); ?>/imgs/thermas.jpg" alt="" />
             </div>
             <div class="preco-data">
               <div class="data">
-                <img src="./imgs/icone-calendario.png" alt="" />
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/imgs/icone-calendario.png" alt="" />
                 <p>11 a 12/05/24</p>
               </div>
               <div class="preco">
@@ -143,7 +65,7 @@
                 href="https://api.whatsapp.com/send/?phone=5584988075272&text&type=phone_number&app_absent=0"
                 target="_blank"
               >
-                <img src="./imgs/icone-carrinho.png" alt="" />
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/imgs/icone-carrinho.png" alt="" />
                 <span>RESERVE AGORA</span>
               </a>
             </button>
@@ -158,11 +80,11 @@
         <div class="container-principal">
           <div class="ft-preco-data">
             <div class="pct-princ-img">
-              <img src="./imgs/porto-galinhas.jpg" alt="" />
+              <img src="<?php echo get_stylesheet_directory_uri(); ?>/imgs/porto-galinhas.jpg" alt="" />
             </div>
             <div class="preco-data">
               <div class="data">
-                <img src="./imgs/icone-calendario.png" alt="" />
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/imgs/icone-calendario.png" alt="" />
                 <p>21/04/24</p>
               </div>
               <div class="preco">
@@ -202,7 +124,7 @@
                 href="https://api.whatsapp.com/send/?phone=5584988075272&text&type=phone_number&app_absent=0"
                 target="_blank"
               >
-                <img src="./imgs/icone-carrinho.png" alt="" />
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/imgs/icone-carrinho.png" alt="" />
                 <span>RESERVE AGORA</span>
               </a>
             </button>
@@ -217,11 +139,11 @@
         <div class="container-principal">
           <div class="ft-preco-data">
             <div class="pct-princ-img">
-              <img src="./imgs/pingo-da-mei-dia-2.jpeg" alt="" />
+              <img src="<?php echo get_stylesheet_directory_uri(); ?>/imgs/pingo-da-mei-dia-2.jpeg" alt="" />
             </div>
             <div class="preco-data">
               <div class="data">
-                <img src="./imgs/icone-calendario.png" alt="" />
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/imgs/icone-calendario.png" alt="" />
                 <p>31/05 a 02/06/24</p>
               </div>
               <div class="preco">
@@ -263,7 +185,7 @@
                 href="https://api.whatsapp.com/send/?phone=5584988075272&text&type=phone_number&app_absent=0"
                 target="_blank"
               >
-                <img src="/imgs/icone-carrinho.png" alt="" />
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/imgs/icone-carrinho.png" alt="" />
                 <span>RESERVE AGORA</span>
               </a>
             </button>
@@ -278,11 +200,11 @@
         <div class="container-principal">
           <div class="ft-preco-data">
             <div class="pct-princ-img">
-              <img src="./imgs/recife.jpg" alt="" />
+              <img src="<?php echo get_stylesheet_directory_uri(); ?>/imgs/recife.jpg" alt="" />
             </div>
             <div class="preco-data">
               <div class="data">
-                <img src="./imgs/icone-calendario.png" alt="" />
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/imgs/icone-calendario.png" alt="" />
                 <p>30/06/24</p>
               </div>
               <div class="preco">
@@ -323,7 +245,7 @@
                 href="https://api.whatsapp.com/send/?phone=5584988075272&text&type=phone_number&app_absent=0"
                 target="_blank"
               >
-                <img src="./imgs/icone-carrinho.png" alt="" />
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/imgs/icone-carrinho.png" alt="" />
                 <span>RESERVE AGORA</span>
               </a>
             </button>
@@ -338,11 +260,11 @@
         <div class="container-principal">
           <div class="ft-preco-data">
             <div class="pct-princ-img">
-              <img src="./imgs/fortaleza.jpg" alt="" />
+              <img src="<?php echo get_stylesheet_directory_uri(); ?>/imgs/fortaleza.jpg" alt="" />
             </div>
             <div class="preco-data">
               <div class="data">
-                <img src="./imgs/icone-calendario.png" alt="" />
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/imgs/icone-calendario.png" alt="" />
                 <p>03 a 06/10/24</p>
               </div>
               <div class="preco">
@@ -389,7 +311,7 @@
                 href="https://api.whatsapp.com/send/?phone=5584988075272&text&type=phone_number&app_absent=0"
                 target="_blank"
               >
-                <img src="./imgs/icone-carrinho.png" alt="" />
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/imgs/icone-carrinho.png" alt="" />
                 <span>RESERVE AGORA</span>
               </a>
             </button>
@@ -404,11 +326,11 @@
         <div class="container-principal">
           <div class="ft-preco-data">
             <div class="pct-princ-img">
-              <img src="./imgs/salvador.jpg" alt="" />
+              <img src="<?php echo get_stylesheet_directory_uri(); ?>/imgs/salvador.jpg" alt="" />
             </div>
             <div class="preco-data">
               <div class="data">
-                <img src="./imgs/icone-calendario.png" alt="" />
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/imgs/icone-calendario.png" alt="" />
                 <p>19 a 23/11/24</p>
               </div>
               <div class="preco">
@@ -451,7 +373,7 @@
                 href="https://api.whatsapp.com/send/?phone=5584988075272&text&type=phone_number&app_absent=0"
                 target="_blank"
               >
-                <img src="./imgs/icone-carrinho.png" alt="" />
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/imgs/icone-carrinho.png" alt="" />
                 <span>RESERVE AGORA</span>
               </a>
             </button>
@@ -466,11 +388,11 @@
         <div class="container-principal">
           <div class="ft-preco-data">
             <div class="pct-princ-img">
-              <img src="./imgs/martins.jpg" alt="" />
+              <img src="<?php echo get_stylesheet_directory_uri(); ?>/imgs/martins.jpg" alt="" />
             </div>
             <div class="preco-data">
               <div class="data">
-                <img src="./imgs/icone-calendario.png" alt="" />
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/imgs/icone-calendario.png" alt="" />
                 <p>23 a 25/08/24</p>
               </div>
               <div class="preco">
@@ -517,7 +439,7 @@
                 href="https://api.whatsapp.com/send/?phone=5584988075272&text&type=phone_number&app_absent=0"
                 target="_blank"
               >
-                <img src="./imgs/icone-carrinho.png" alt="" />
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/imgs/icone-carrinho.png" alt="" />
                 <span>RESERVE AGORA</span>
               </a>
             </button>
@@ -532,11 +454,11 @@
         <div class="container-principal">
           <div class="ft-preco-data">
             <div class="pct-princ-img">
-              <img src="./imgs/gramado.jpg" alt="" />
+              <img src="<?php echo get_stylesheet_directory_uri(); ?>/imgs/gramado.jpg" alt="" />
             </div>
             <div class="preco-data">
               <div class="data">
-                <img src="./imgs/icone-calendario.png" alt="" />
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/imgs/icone-calendario.png" alt="" />
                 <p>26 a 30/11/24</p>
               </div>
               <div class="preco">
@@ -577,7 +499,7 @@
                 href="https://api.whatsapp.com/send/?phone=5584988075272&text&type=phone_number&app_absent=0"
                 target="_blank"
               >
-                <img src="./imgs/icone-carrinho.png" alt="" />
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/imgs/icone-carrinho.png" alt="" />
                 <span>RESERVE AGORA</span>
               </a>
             </button>
@@ -592,11 +514,11 @@
               <div class="container-principal">
                 <div class="ft-preco-data">
                   <div class="pct-princ-img">
-                    <img src="./imgs/gameleiras.jpg" alt="" />
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/imgs/gameleiras.jpg" alt="" />
                   </div>
                   <div class="preco-data">
                     <div class="data">
-                      <img src="./imgs/icone-calendario.png" alt="" />
+                      <img src="<?php echo get_stylesheet_directory_uri(); ?>/imgs/icone-calendario.png" alt="" />
                       <p>06 a 08/09/24</p>
                     </div>
                     <div class="preco">
@@ -649,13 +571,13 @@
 
       <!-- CARROSSEL DE PACOTES -->
       <ul id="carrossel-pcts">
-        <button class="pre-btn"><img src="./imgs/seta-voltar.png" alt=""></button>
-          <button class="nxt-btn"><img src="./imgs/seta-avancar.png" alt=""></button>
+        <button class="pre-btn"><img src="<?php echo get_stylesheet_directory_uri(); ?>/imgs/seta-voltar.png" alt=""></button>
+          <button class="nxt-btn"><img src="<?php echo get_stylesheet_directory_uri(); ?>/imgs/seta-avancar.png" alt=""></button>
 
           <li class="pct-item" data-click="gameleiras" onclick="backTop();">
             <a href=""
               ><h2>Serra de São Bento e<br />Monte das Gameleiras</h2>
-              <img src="./imgs/gameleiras.jpg" alt="" />
+              <img src="<?php echo get_stylesheet_directory_uri(); ?>/imgs/gameleiras.jpg" alt="" />
               <p class="a-partir-de">A partir de 5x <strong>R$ 145,80</strong></p>
               <p>
                 - Transporte categoria turismo<br />
@@ -672,7 +594,7 @@
         <li class="pct-item" data-click="pingo" onclick="backTop();">
           <a href=""
             ><h2>Pingo da <br />Mei Dia</h2>
-            <img src="./imgs/pingo-mei-dia.png" alt="" />
+            <img src="<?php echo get_stylesheet_directory_uri(); ?>/imgs/pingo-mei-dia.png" alt="" />
             <p class="a-partir-de">A partir de <strong>R$ 589,00</strong></p>
             <p>
               - Transporte categoria turismo<br />
@@ -688,7 +610,7 @@
         <li class="pct-item" data-click="thermas" onclick="backTop();">
           <a href=""
             ><h2>Dia das Mães<br />Hotel Thermas</h2>
-            <img src="./imgs/thermas.jpg" alt="" />
+            <img src="<?php echo get_stylesheet_directory_uri(); ?>/imgs/thermas.jpg" alt="" />
             <p class="a-partir-de">A partir de <strong>R$ 469,00</strong></p>
             <p>
               - Transporte categoria turismo<br />
@@ -704,7 +626,7 @@
         <li class="pct-item" data-click="porto-galinhas" onclick="backTop();">
           <a href=""
             ><h2>PORTO DE GALINHAS<br />BATE-VOLTA</h2>
-            <img src="./imgs/port-de-galinhas.webp" alt="" />
+            <img src="<?php echo get_stylesheet_directory_uri(); ?>/imgs/port-de-galinhas.webp" alt="" />
             <p class="a-partir-de">A partir de <strong>R$ 199,00</strong></p>
             <p>
               - Transporte categoria turismo<br />
@@ -721,7 +643,7 @@
               Olinda, Recife<br />
               e Oficina de Brennand
             </h2>
-            <img src="./imgs/olinda.webp" alt="" />
+            <img src="<?php echo get_stylesheet_directory_uri(); ?>/imgs/olinda.webp" alt="" />
             <p class="a-partir-de">A partir de <strong>R$ 169,00</strong></p>
             <p>
               - Transporte categoria turismo<br />
@@ -736,7 +658,7 @@
         <li class="pct-item" data-click="fortaleza" onclick="backTop();">
           <a href=""
             ><h2>Fortaleza<br />para lazer e compras</h2>
-            <img src="./imgs/fortaleza.jpg" alt="" />
+            <img src="<?php echo get_stylesheet_directory_uri(); ?>/imgs/fortaleza.jpg" alt="" />
             <p class="a-partir-de">A partir de <strong>R$ 849,00</strong></p>
             <p>
               - Transporte categoria turismo<br />
@@ -751,7 +673,7 @@
         <li class="pct-item" data-click="salvador" onclick="backTop();">
           <a href=""
             ><h2>Salvador<br />visite a boa terra</h2>
-            <img src="./imgs/salvador.jpg" alt="" />
+            <img src="<?php echo get_stylesheet_directory_uri(); ?>/imgs/salvador.jpg" alt="" />
             <p class="a-partir-de">A partir de <strong>R$ 1299,00</strong></p>
             <p>
               - Transporte luxo turismo<br />
@@ -766,7 +688,7 @@
         <li class="pct-item" data-click="martins" onclick="backTop();">
           <a href=""
             ><h2>Festival de Fondue<br />Martins</h2>
-            <img src="./imgs/martins.jpg" alt="" />
+            <img src="<?php echo get_stylesheet_directory_uri(); ?>/imgs/martins.jpg" alt="" />
             <p class="a-partir-de">A partir de <strong>R$ 1599,00</strong></p>
             <p>
               - Transporte categoria turismo<br />
@@ -782,7 +704,7 @@
         <li class="pct-item" data-click="gramado" onclick="backTop();">
           <a href=""
             ><h2>Natal Luz em Gramado<br />e Canela</h2>
-            <img src="./imgs/gramado.jpg" alt="" />
+            <img src="<?php echo get_stylesheet_directory_uri(); ?>/imgs/gramado.jpg" alt="" />
             <p class="a-partir-de">Até 12x de <strong>R$ 204,08</strong></p>
             <p>
               - Passagens áreas<br />
@@ -797,24 +719,6 @@
       <!-- FIM DO PACOTE EM EVIDÊNCIA -->
     </div>
 
-    <!-- FOOTER -->
-    <footer id="footer">
-      <div id="ftr-ld-esq">
-        <img src="./imgs/logo.png" alt="" />
-        <div>
-          <p>+55 84 98807-5272</p>
-          <p class="CNPJ"><strong>CNPJ</strong>: 45.521.987/0001-28</p>
-        </div>
-      </div>
-      <div id="ftr-ld-dir">
-        <h2>links úteis</h2>
-        <a href="./">> Registro legal</a>
-        <a href="./">> Email para parceria</a>
-        <p>Desenvolvido pela Poti Comunicação.</p>
-      </div>
-    </footer>
-    <!-- FIM DE FOOTER -->
-    <script src="./jquery.js"></script>
-    <script src="./script.min.js"></script>
-  </body>
-</html>
+<!-- get footer php -->
+<?php get_footer(); ?>
+<!-- get footer php -->
