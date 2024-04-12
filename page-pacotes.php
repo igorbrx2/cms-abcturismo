@@ -8,6 +8,7 @@
 <!-- get header php -->
 
     <!-- IMAGEM DE PACOTES -->
+<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
     <section id="pacotes-titulo">
       <h1 class="titulo-paginas">PACOTES</h1>
     </section>
@@ -718,6 +719,7 @@
 
       <!-- FIM DO PACOTE EM EVIDÊNCIA -->
     </div>
+<?php endwhile; else: endif; ?>
 
 <!-- get footer php -->
 <?php get_footer(); ?>

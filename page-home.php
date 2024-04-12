@@ -7,7 +7,8 @@
     <!-- het header php -->
     
     <!-- INTRODUÇÃO -->
-    <section id="intro">
+  <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+    <section id="intro" class="page-home" >
       <h1>ABC TURISMO PEDAGÓGICO</h1>
       <p>
         Agência de viagens, excursões, assessoria em turismo e elaboração de
@@ -136,6 +137,7 @@
         </div>
       </div>
     </section>
+    <?php endwhile; else: endif; ?>
     <!-- FIM DO BLOG -->
 
         <!-- get footer php -->

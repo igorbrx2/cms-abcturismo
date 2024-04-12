@@ -7,6 +7,7 @@
     <!-- get header php -->
 
     <!-- IMAGEM DE BLOG -->
+<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
     <section id="blog-titulo">
       <h1 class="titulo-paginas">BLOG</h1>
     </section>
@@ -73,6 +74,7 @@
         </a>
       </li>
     </ul>
+<?php endwhile; else: endif; ?>
 
 <!-- get footer php -->
 <?php get_footer(); ?>

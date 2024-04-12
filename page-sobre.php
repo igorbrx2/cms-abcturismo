@@ -11,6 +11,7 @@
     <!-- FIM DE HEADER -->
 
     <!-- IMAGEM DE SOBRE -->
+<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
     <section id="sobre-titulo">
       <h1 class="titulo-paginas">SOBRE</h1>
     </section>
@@ -103,6 +104,7 @@
         </div>
       </div>
     </section>
+<?php endwhile; else: endif; ?>
     <!-- FIM DE EQUIPE -->
 
 <!-- get footer php -->

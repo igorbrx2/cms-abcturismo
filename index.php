@@ -1,9 +1,17 @@
 
-    <!-- get header php -->
-    <?php get_header(); ?>
-    <!-- het header php -->
+<!-- get header php -->
+<?php get_header(); ?>
+<!-- het header php -->
     
+    <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+	
+	<?php the_title(); ?>
+	<?php the_content(); ?>
 
-        <!-- get footer php -->
-        <?php get_footer(); ?>
-    <!-- het footer php -->
+    <?php endwhile; else: ?>
+    <p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
+    <?php endif; ?>
+
+<!-- get footer php -->
+<?php get_footer(); ?>
+<!-- het footer php -->
