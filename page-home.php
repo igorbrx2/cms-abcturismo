@@ -2,24 +2,23 @@
 // Template Name: Home
 ?>
 
-    <!-- get header php -->
-    <?php get_header(); ?>
-    <!-- het header php -->
-    
-    <!-- INTRODUÇÃO -->
-  <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-    <section id="intro" class="page-home" >
+<!-- get header php -->
+<?php get_header(); ?>
+<!-- het header php -->
+
+<!-- INTRODUÇÃO -->
+<?php if (have_posts()):
+  while (have_posts()):
+    the_post(); ?>
+    <section id="intro" class="page-home">
       <h1>ABC TURISMO PEDAGÓGICO</h1>
       <p>
         Agência de viagens, excursões, assessoria em turismo e elaboração de
         roteiros turísticos pedagógicos, histórico-culturais, sol e mar.
         <br />CNPJ: 45.521.987/0001-28
       </p>
-      <a
-        href="https://api.whatsapp.com/send/?phone=5584988075272&text&type=phone_number&app_absent=0"
-        target="_blank"
-        ><button>ENTRE EM CONTATO</button></a
-      >
+      <a href="https://api.whatsapp.com/send/?phone=5584988075272&text&type=phone_number&app_absent=0"
+        target="_blank"><button>ENTRE EM CONTATO</button></a>
     </section>
     <!-- FIM DA INTRODUÇÃO -->
 
@@ -29,15 +28,11 @@
       <div id="crsl-pcts" class="carousel">
         <a href="/pacotes/">
           <div class="pct-item">
-            <h2>Dia das Mães<br />Hotel Thermas</h2>
-            <img src="<?php echo get_stylesheet_directory_uri(); ?>/imgs/thermas.jpg" alt="" />
-            <p class="a-partir-de">A partir de <strong>R$ 469,00</strong></p>
+            <h2><?php the_field('titulo_pacote1_reserveja'); ?></h2>
+            <img src="<?php the_field('img_pacote1_reserveja'); ?>" alt="" />
+            <p class="a-partir-de">A partir de <strong>R$ <?php the_field('preco_pacote1_reserveja'); ?></strong></p>
             <p>
-              - Transporte categoria turismo<br />
-              - Diária no Hotel Thermas com café da manhã<br />
-              - Acesso ao parque e piscinas termais<br />
-              - Almoço no domingo<br />
-              - Tour com guias credenciados
+              <?php the_field('conteudo_pacote1'); ?>
             </p>
             <span>+</span>
           </div>
@@ -45,13 +40,11 @@
 
         <a href="/pacotes/">
           <div class="pct-item center">
-            <h2>PORTO DE GALINHAS<br />BATE-VOLTA</h2>
-            <img src="<?php echo get_stylesheet_directory_uri(); ?>/imgs/port-de-galinhas.webp" alt="" />
-            <p class="a-partir-de">A partir de <strong>R$ 199,00</strong></p>
+            <h2><?php the_field('titulo_pacote2_reserveja'); ?></h2>
+            <img src="<?php the_field('img_pacote2_reserveja'); ?>" alt="" />
+            <p class="a-partir-de">A partir de <strong>R$ <?php the_field('preco_pacote2_reserveja'); ?></strong></p>
             <p>
-              - Transporte categoria turismo<br />
-              - Guias credenciados<br />
-              - Seguro viagem<br />
+              <?php the_field('conteudo_pacote2'); ?>
             </p>
             <span>+</span>
           </div>
@@ -59,15 +52,11 @@
 
         <a href="/pacotes/">
           <div class="pct-item">
-            <h2>Pingo da Mei Dia<br />Mossoró</h2>
-            <img src="<?php echo get_stylesheet_directory_uri(); ?>/imgs/pingo-mei-dia.png" alt="" />
-            <p class="a-partir-de">A partir de <strong>R$ 589,00</strong></p>
+            <h2><?php the_field('titulo_pacote3_reserveja'); ?></h2>
+            <img src="<?php the_field('img_pacote3_reserveja'); ?>" alt="" />
+            <p class="a-partir-de">A partir de <strong>R$ <?php the_field('preco_pacote3_reserveja'); ?></strong></p>
             <p>
-              - Transporte categoria turismo<br />
-              - Duas diárias com café da manhã no Sabinos Palace Hotel<br />
-              - Tour histórico<br />
-              - Guias credenciados<br />
-              - Seguro viagem individual
+              <?php the_field('conteudo_pacote3'); ?>
             </p>
             <span>+</span>
           </div>
@@ -81,19 +70,16 @@
       <h1 class="titulo-cinza-vazado">DEPOIMENTOS</h1>
       <ul class="depoimentos">
         <li>
-          <a href="" class="depo-foto" data-click="wil"
-            ><img src="<?php echo get_stylesheet_directory_uri(); ?>/imgs/Wil.jpg" alt="" />Wil Silva</a
-          >
+          <a href="" class="depo-foto" data-click="wil"><img
+              src="<?php echo get_stylesheet_directory_uri(); ?>/imgs/Wil.jpg" alt="" />Wil Silva</a>
         </li>
         <li>
-          <a href="" class="depo-foto" data-click="igor"
-            ><img src="<?php echo get_stylesheet_directory_uri(); ?>/imgs/Igor.jpg" alt="" />Igor Gomes</a
-          >
+          <a href="" class="depo-foto" data-click="igor"><img
+              src="<?php echo get_stylesheet_directory_uri(); ?>/imgs/Igor.jpg" alt="" />Igor Gomes</a>
         </li>
         <li>
-          <a href="" class="depo-foto" data-click="jp"
-            ><img src="<?php echo get_stylesheet_directory_uri(); ?>/imgs/JP.jpg" alt="" />João Paulo</a
-          >
+          <a href="" class="depo-foto" data-click="jp"><img src="<?php echo get_stylesheet_directory_uri(); ?>/imgs/JP.jpg"
+              alt="" />João Paulo</a>
         </li>
       </ul>
       <div class="depo-txt" data-target="wil">
@@ -119,27 +105,12 @@
     <!-- FIM DE DEPOIMENTOS -->
 
     <!-- BLOG -->
-    <section id="ultimo-post">
-      <h1 class="titulo-azul">ÚLTIMO POST</h1>
 
-      <div class="ultimo-post">
-        <img src="<?php echo get_stylesheet_directory_uri(); ?>/imgs/pingo-mei-dia.png" alt="" />
-        <div class="ctd-post">
-          <h2>O Pingo da Mei Dia: A festa que ilumina Mossoró</h2>
-          <p>
-            No coração do sertão nordestino, uma cidade resplandece em cores
-            vivas e energia contagiante: Mossoró, no Rio Grande do Norte. E se
-            há uma celebração que encapsula toda a essência vibrante e calorosa
-            dessa cidade, é o "Pingo da Mei Dia". Imagine uma tarde quente de
-            junho...
-          </p>
-          <a href="/blog-post/">+ Leia mais</a>
-        </div>
-      </div>
-    </section>
-    <?php endwhile; else: endif; ?>
-    <!-- FIM DO BLOG -->
+    <?php include (TEMPLATEPATH . "/includes/blog-preview.php"); ?>
 
-        <!-- get footer php -->
-        <?php get_footer(); ?>
-    <!-- het footer php -->
+  <?php endwhile; else: endif; ?>
+<!-- FIM DO BLOG -->
+
+<!-- get footer php -->
+<?php get_footer(); ?>
+<!-- het footer php -->

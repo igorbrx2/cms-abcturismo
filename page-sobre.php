@@ -8,10 +8,12 @@
 <!-- get header php -->
 
 
-    <!-- FIM DE HEADER -->
+<!-- FIM DE HEADER -->
 
-    <!-- IMAGEM DE SOBRE -->
-<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+<!-- IMAGEM DE SOBRE -->
+<?php if (have_posts()):
+  while (have_posts()):
+    the_post(); ?>
     <section id="sobre-titulo">
       <h1 class="titulo-paginas">SOBRE</h1>
     </section>
@@ -22,16 +24,10 @@
       <h1 class="titulo-laranja">NOSSA HISTÓRIA</h1>
       <div id="sobre">
         <div class="sobre-img">
-          <img src="<?php echo get_stylesheet_directory_uri(); ?>/imgs/carnaval-acbturismo.png" alt="" />
+          <img src="<?php the_field('imagem_sobre'); ?>" alt="" />
         </div>
         <p>
-          A AbcTurismo Lazer e Pedagógico, fundada no ano de 2017, situada no
-          estado do Rio Grande do Norte, é uma agência de viagens especializada
-          na elaboração, execução e assessoria em roteiros e viagens pedagógicas
-          e de lazer, rodoviárias e aéreas, para todo o território nacional.
-          <br />
-          <br />Nessa meta é oferecer um serviço com qualidade e de excelência,
-          com foco no cuidado, atenção e no bem estar dos nossos clientes.
+          <?php the_field('nossa_historia'); ?>
         </p>
       </div>
     </article>
@@ -104,8 +100,8 @@
         </div>
       </div>
     </section>
-<?php endwhile; else: endif; ?>
-    <!-- FIM DE EQUIPE -->
+  <?php endwhile; else: endif; ?>
+<!-- FIM DE EQUIPE -->
 
 <!-- get footer php -->
 <?php get_footer(); ?>
