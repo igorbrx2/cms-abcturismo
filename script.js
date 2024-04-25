@@ -1,3 +1,4 @@
+
 // ROLAR DIRETO PARA O CONTEÚDO AO TROCAR DE PÁGINA
 
 document.addEventListener("DOMContentLoaded", function(event) { 
