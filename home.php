@@ -48,7 +48,7 @@
             <?php the_post_thumbnail('thumbnail'); ?>
           </div>
           <h2><?php the_title(); ?></h2>
-          <p><?php the_excerpt(); ?></p>
+          <p><?php echo wp_trim_words(get_the_excerpt(), 30); ?></p>
           <span>+ Leia Mais</span>
         </a>
       </div>

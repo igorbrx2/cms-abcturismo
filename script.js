@@ -139,6 +139,7 @@ function search() {
   }
 }
 
+
 // MENU MOBILE
 
 class MobileNavbar {
