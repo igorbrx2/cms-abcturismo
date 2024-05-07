@@ -34,44 +34,38 @@ function get_new_posts_callback() {
   die();
 }
 
-// Custom Post Type => nossospacotes
+/* Adiciona um novo custom post type */
+function add_cpt() { 
 
-function custom_post_type_nossospacotes() {
-	register_post_type('nossospacotes', array(
-		'label' => 'nossospacotes',
-		'description' => 'nossospacotes',
-		'public' => true,
-		'show_ui' => true,
-		'show_in_menu' => true,
-		'capability_type' => 'post',
-		'map_meta_cap' => true,
-		'hierarchical' => false,
-		'rewrite' => array('slug' => 'nossospacotes', 'with_front' => true),
-		'query_var' => true,
-		'supports' => array('title', 'editor', 'page-attributes','post-formats'),
+    /* Informa os nomes que serão exibidos na dashboard do WordPress */
+    $labels = [
+        "name" => __( "Pacotes", "chaplin-child" ),
+        "singular_name" => __( "Pacotes", "chaplin-child" ),
+        "menu_name" => __( "Pacotes", "chaplin-child" ),
+        "all_items" => __( "Todos os itens", "chaplin-child" ),
+    ];
 
-		'labels' => array (
-			'name' => 'nossospacotes
-',
-			'singular_name' => 'nossospacotes',
-			'menu_name' => 'nossospacotes
-',
-			'add_new' => 'Adicionar Novo',
-			'add_new_item' => 'Adicionar Novo nossospacotes',
-			'edit' => 'Editar',
-			'edit_item' => 'Editar nossospacotes',
-			'new_item' => 'Novo nossospacotes',
-			'view' => 'Ver nossospacotes',
-			'view_item' => 'Ver nossospacotes',
-			'search_items' => 'Procurar nossospacotes
-',
-			'not_found' => 'Nenhum nossospacotes Encontrado',
-			'not_found_in_trash' => 'Nenhum nossospacotes Encontrado no Lixo',
-		)
-	));
+    /* Informa os argumentos do custom post type */
+    $args = [
+        "label" => __( "Pacotes", "chaplin-child" ),
+        "labels" => $labels,
+        "description" => "Nossos pacotes disponíveis.",
+        "public" => true,
+           "has_archive" => true,
+        "show_in_menu" => true,
+        "delete_with_user" => false,
+        "exclude_from_search" => false,
+        "hierarchical" => false,
+        "rewrite" => [ "slug" => "pacotes", "with_front" => true ],
+        "menu_icon" => "dashicons-text-page",
+        "supports" => [ "title", "editor", "thumbnail", "excerpt", "comments", "revisions", "author", "page-attributes", "post-formats" ],
+    ];
+
+    /* Registra o custom post type */
+    register_post_type( "pacotes", $args );
 }
-add_action('init', 'custom_post_type_nossospacotes');
 
+/* Adiciona a função que acabou de ser criada */
+add_action( 'init', 'add_cpt' );
 
 ?>
-
