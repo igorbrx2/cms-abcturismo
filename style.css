@@ -181,9 +181,10 @@ padding: 10px 15px;
 }
 
 .pct-item h2 {
-  max-width: 20ch;
+  max-width: 25ch;
   align-self: center;
   padding: 15px 0;
+  margin: 0 auto;
   color: var(--cinza-escuro);
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -194,7 +195,7 @@ padding: 10px 15px;
 }
 
 .pct-item p {
-  padding: 5px 15px;
+  padding: 15px 15px;
   color: var(--cinza-texto);
   font-weight: bold;
 }
@@ -717,6 +718,7 @@ padding: 10px 15px;
   font-size: 1.1rem;
   padding: 10px 20px;
   border-radius: 45px;
+  text-transform: uppercase;
 }
 
 .prc span {

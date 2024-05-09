@@ -39,15 +39,15 @@ function add_cpt() {
 
     /* Informa os nomes que serão exibidos na dashboard do WordPress */
     $labels = [
-        "name" => __( "Pacotes", "chaplin-child" ),
-        "singular_name" => __( "Pacotes", "chaplin-child" ),
-        "menu_name" => __( "Pacotes", "chaplin-child" ),
+        "name" => __( "Nossos Pacotes", "chaplin-child" ),
+        "singular_name" => __( "Nossos Pacotes", "chaplin-child" ),
+        "menu_name" => __( "Nossos Pacotes", "chaplin-child" ),
         "all_items" => __( "Todos os itens", "chaplin-child" ),
     ];
 
     /* Informa os argumentos do custom post type */
     $args = [
-        "label" => __( "Pacotes", "chaplin-child" ),
+        "label" => __( "Nossospacotes", "chaplin-child" ),
         "labels" => $labels,
         "description" => "Nossos pacotes disponíveis.",
         "public" => true,
@@ -56,13 +56,13 @@ function add_cpt() {
         "delete_with_user" => false,
         "exclude_from_search" => false,
         "hierarchical" => false,
-        "rewrite" => [ "slug" => "pacotes", "with_front" => true ],
+        "rewrite" => [ "slug" => "nossospacotes", "with_front" => true ],
         "menu_icon" => "dashicons-text-page",
         "supports" => [ "title", "editor", "thumbnail", "excerpt", "comments", "revisions", "author", "page-attributes", "post-formats" ],
     ];
 
     /* Registra o custom post type */
-    register_post_type( "pacotes", $args );
+    register_post_type( "nossospacotes", $args );
 }
 
 /* Adiciona a função que acabou de ser criada */

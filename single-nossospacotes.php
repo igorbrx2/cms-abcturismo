@@ -89,6 +89,9 @@
 
 </article>
 
+<!-- CARROSSEL DE PACOTES -->
+<?php include (TEMPLATEPATH . "/includes/carrossel-pacotes.php"); ?>
+
 <?php endwhile; else: ?>
 <p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
 <?php endif; ?>
