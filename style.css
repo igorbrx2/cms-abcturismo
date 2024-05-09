@@ -968,6 +968,7 @@ P {
 .blog-post h3 {
   font-size: 1.5rem;
   text-transform: uppercase;
+  text-align: center;
   font-weight: bold;
   margin-top: 20px;
   margin-bottom: 20px;
@@ -979,6 +980,7 @@ P {
   font-size: 1.3rem;
   font-weight: bold;
   text-transform: uppercase;
+  text-align: center;
   margin-top: 20px;
   margin-bottom: 20px;
   line-height: 1.2;

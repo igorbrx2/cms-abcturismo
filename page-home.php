@@ -7,9 +7,6 @@
 <!-- het header php -->
 
 <!-- INTRODUÇÃO -->
-<?php if (have_posts()):
-  while (have_posts()):
-    the_post(); ?>
     <section id="intro" class="page-home">
       <h1>ABC TURISMO PEDAGÓGICO</h1>
       <p>
@@ -26,41 +23,37 @@
     <article id="reserve-ja" class="carousel-container">
       <h1 class="titulo-laranja">RESERVE JÁ!</h1>
       <div id="crsl-pcts" class="carousel">
-        <a href="/pacotes/">
+
+      <?php
+// Consulta para obter os posts do tipo personalizado
+$args = array(
+    'post_type' => 'nossospacotes', // Substitua 'seu_tipo_de_post_personalizado' pelo nome do seu tipo de post personalizado
+    'posts_per_page' => 3, // Para recuperar todos os posts
+);
+
+$loop = new WP_Query( $args );
+
+if ( $loop->have_posts() ) :
+    while ( $loop->have_posts() ) : $loop->the_post(); ?>
+
+        <a href="<?php the_permalink(); ?>">
           <div class="pct-item">
-            <h2><?php the_field('titulo_pacote1_reserveja'); ?></h2>
-            <img src="<?php the_field('img_pacote1_reserveja'); ?>" alt="" />
-            <p class="a-partir-de">A partir de <strong>R$ <?php the_field('preco_pacote1_reserveja'); ?></strong></p>
+            <h2><?php the_field('titulo_pacote'); ?></h2>
+            <img src="<?php the_field( 'img_pacote' ); ?>" alt="" />
+            <p class="a-partir-de">A partir de <strong><?php the_field( 'preco1' ); ?></strong></p>
             <p>
-              <?php the_field('conteudo_pacote1'); ?>
+            <?php echo wp_trim_words( get_the_content(), 20, '...' ); ?>
             </p>
             <span>+</span>
           </div>
         </a>
 
-        <a href="/pacotes/">
-          <div class="pct-item center">
-            <h2><?php the_field('titulo_pacote2_reserveja'); ?></h2>
-            <img src="<?php the_field('img_pacote2_reserveja'); ?>" alt="" />
-            <p class="a-partir-de">A partir de <strong>R$ <?php the_field('preco_pacote2_reserveja'); ?></strong></p>
-            <p>
-              <?php the_field('conteudo_pacote2'); ?>
-            </p>
-            <span>+</span>
-          </div>
-        </a>
+        <?php endwhile;
+    wp_reset_postdata(); // Restaura os dados do post
+else : ?>
+    <p><?php _e('Desculpe, nenhum post corresponde aos seus critérios.'); ?></p>
+<?php endif; ?>
 
-        <a href="/pacotes/">
-          <div class="pct-item">
-            <h2><?php the_field('titulo_pacote3_reserveja'); ?></h2>
-            <img src="<?php the_field('img_pacote3_reserveja'); ?>" alt="" />
-            <p class="a-partir-de">A partir de <strong>R$ <?php the_field('preco_pacote3_reserveja'); ?></strong></p>
-            <p>
-              <?php the_field('conteudo_pacote3'); ?>
-            </p>
-            <span>+</span>
-          </div>
-        </a>
       </div>
     </article>
     <!-- FIM DE RESERVE JÁ -->
@@ -108,7 +101,6 @@
 
     <?php include (TEMPLATEPATH . "/includes/blog-preview.php"); ?>
 
-  <?php endwhile; else: endif; ?>
 <!-- FIM DO BLOG -->
 
 <!-- get footer php -->
