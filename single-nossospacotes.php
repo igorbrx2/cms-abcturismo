@@ -49,26 +49,33 @@
             <h2>valores por pessoa</h2>
             <div class="valores">
 
+                  <?php if (get_field('preco1')): ?>
                   <div class="prc">
                     <p><?php the_field( 'preco1' ); ?></p>
                     <span><?php the_field( 'caracteristica_preco1' ); ?></span>
                   </div>
+                  <?php endif; ?>
 
+                  <?php if (get_field('preco2')): ?>
                   <div class="prc">
                     <p><?php the_field( 'preco2' ); ?></p>
                     <span><?php the_field( 'caracteristica_preco2' ); ?></span>
                   </div>
+                  <?php endif; ?>
 
+                  <?php if (get_field('preco3')): ?>
                   <div class="prc">
                     <p><?php the_field( 'preco3' ); ?></p>
                     <span><?php the_field( 'caracteristica_preco3' ); ?></span>
                   </div>
+                  <?php endif; ?>
 
+                  <?php if (get_field('preco4')): ?>
                   <div class="prc">
                     <p><?php the_field( 'preco4' ); ?></p>
                     <span><?php the_field( 'caracteristica_preco4' ); ?></span>
                   </div>
-
+                  <?php endif; ?>   
                 </div>
           </div>
         </div>

@@ -31,9 +31,18 @@
         <li>
           <a href="/home/">INICIO</a>
         </li>
-        <li><a href="/sobre/">SOBRE</a></li>
-        <li><a href="/pacotes/">PACOTES</a></li>
-        <li><a href="/blog/">BLOG</a></li>
+        
+        <li>
+          <a href="/sobre/">SOBRE</a>
+        </li>
+        
+          <li>
+        <a href="/pacotes/">PACOTES</a>
+          </li>
+        
+        <li>
+          <a href="/blog/">BLOG</a>
+        </li>
       </ul>
     </nav>
 

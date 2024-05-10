@@ -452,9 +452,7 @@
   
   
   .preco {
-    margin-top: 20px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 20px 10px auto;
   }
   
   .dsc-reserve {
