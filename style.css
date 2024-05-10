@@ -150,6 +150,8 @@ padding: 10px 15px;
 .pct-item img {
   width: 301px;
   height: 200px;
+  object-fit: cover;
+  object-position: top;
 }
 
 .pct-item h2 {

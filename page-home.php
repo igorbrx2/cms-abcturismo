@@ -39,7 +39,11 @@ if ( $loop->have_posts() ) :
         <a href="<?php the_permalink(); ?>">
           <div class="pct-item">
             <h2><?php the_field('titulo_pacote'); ?></h2>
-            <img src="<?php the_field( 'img_pacote' ); ?>" alt="" />
+            <?php if ( has_post_thumbnail() ) :  ?>
+            <?php $thumb_id = get_post_thumbnail_id(); ?>
+            <?php $thumb_url = wp_get_attachment_image_src( $thumb_id, 'large' ); ?>
+            <img src="<?php echo esc_url( $thumb_url[0] ); ?>" alt="">
+        <?php endif; ?>
             <p class="a-partir-de">A partir de <strong><?php the_field( 'preco1' ); ?></strong></p>
             <p>
             <?php echo wp_trim_words( get_the_content(), 20, '...' ); ?>
