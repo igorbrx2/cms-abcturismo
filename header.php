@@ -28,19 +28,19 @@
     <a id="logo" href="/home/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/imgs/logo.png" alt="" /></a>
     <nav id="navegacao">
       <ul id="menu">
-        <li>
+        <li <?php if(is_page('home')) echo 'class="active"'; ?>>
           <a href="/home/">INICIO</a>
         </li>
         
-        <li>
+        <li <?php if(is_page('sobre')) echo 'class="active"'; ?>>
           <a href="/sobre/">SOBRE</a>
         </li>
         
-          <li>
+          <li <?php if(is_page('pacotes') || is_singular('nossospacotes')) echo 'class="active"'; ?>>
         <a href="/pacotes/">PACOTES</a>
           </li>
         
-        <li>
+        <li <?php if(is_home() || is_singular('post') || (is_archive() && !is_category() && !is_tag() && !is_author() && !is_date())) echo 'class="active"'; ?>>
           <a href="/blog/">BLOG</a>
         </li>
       </ul>
