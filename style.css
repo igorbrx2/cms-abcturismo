@@ -325,8 +325,7 @@ padding: 10px 15px;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  margin-top: 50px;
-  height: 130px;
+  margin-top: 25px;
   width: 100vw;
   background-color: var(--laranja);
 }
@@ -341,8 +340,10 @@ padding: 10px 15px;
   max-width: 75%;
   color: var(--branco-puro);
   font-weight: 400;
-  text-align: center;
+  font-size: 1.2rem;
+  text-align: start;
   line-height: 1.3;
+  margin: 20px auto;
 }
 
 /* BLOG */
