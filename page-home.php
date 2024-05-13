@@ -24,11 +24,9 @@
       <h1 class="titulo-laranja">RESERVE JÁ!</h1>
       <div id="crsl-pcts" class="carousel">
 
-      <?php
-// Consulta para obter os posts do tipo personalizado
-$args = array(
-    'post_type' => 'nossospacotes', // Substitua 'seu_tipo_de_post_personalizado' pelo nome do seu tipo de post personalizado
-    'posts_per_page' => 3, // Para recuperar todos os posts
+      <?php $args = array(
+    'post_type' => 'nossospacotes',
+    'posts_per_page' => 3,
 );
 
 $loop = new WP_Query( $args );
@@ -53,7 +51,7 @@ if ( $loop->have_posts() ) :
         </a>
 
         <?php endwhile;
-    wp_reset_postdata(); // Restaura os dados do post
+    wp_reset_postdata();
 else : ?>
     <p><?php _e('Desculpe, nenhum post corresponde aos seus critérios.'); ?></p>
 <?php endif; ?>
@@ -67,42 +65,82 @@ else : ?>
       <h1 class="titulo-cinza-vazado">DEPOIMENTOS</h1>
       <ul class="depoimentos">
         <li>
-          <a href="" class="depo-foto" data-click="wil"><img
-              src="<?php echo get_stylesheet_directory_uri(); ?>/imgs/Wil.jpg" alt="" />Wil Silva</a>
+          <a href="" class="depo-foto" data-click="soraia"><img
+              src="<?php echo get_stylesheet_directory_uri(); ?>/imgs/soraia marrocos.jpg" alt="" />Soraia Marrocos</a>
         </li>
+        
         <li>
-          <a href="" class="depo-foto" data-click="igor"><img
-              src="<?php echo get_stylesheet_directory_uri(); ?>/imgs/Igor.jpg" alt="" />Igor Gomes</a>
+          <a href="" class="depo-foto" data-click="silvana"><img
+              src="<?php echo get_stylesheet_directory_uri(); ?>/imgs/silvana.jpg" alt="" />Silvana França</a>
         </li>
+
         <li>
-          <a href="" class="depo-foto" data-click="jp"><img src="<?php echo get_stylesheet_directory_uri(); ?>/imgs/JP.jpg"
-              alt="" />João Paulo</a>
+          <a href="" class="depo-foto" data-click="aluizia"><img src="<?php echo get_stylesheet_directory_uri(); ?>/imgs/aluizia freire.jpg"
+              alt="" />Aluizia Freire</a>
         </li>
+
+        <li>
+          <a href="" class="depo-foto" data-click="leticia"><img src="<?php echo get_stylesheet_directory_uri(); ?>/imgs/leticia ferreira.jpg"
+              alt="" />Leticia Ferreira</a>
+        </li>
+
+        <li>
+          <a href="" class="depo-foto" data-click="ana"><img src="<?php echo get_stylesheet_directory_uri(); ?>/imgs/ana cassia.jpg"
+              alt="" />Ana Cassia</a>
+        </li>
+
+        <li>
+          <a href="" class="depo-foto" data-click="auricelia"><img src="<?php echo get_stylesheet_directory_uri(); ?>/imgs/auricelia melo.jpg"
+              alt="" />Auricelia Melo</a>
+        </li>
+
+        <li>
+          <a href="" class="depo-foto" data-click="israel"><img src="<?php echo get_stylesheet_directory_uri(); ?>/imgs/israel de souza.jpg"
+              alt="" />Israel de Souza</a>
+        </li>
+
       </ul>
-      <div class="depo-txt" data-target="wil">
+      <div class="depo-txt" data-target="leticia">
         <p>
-          "Viajar com a ABC Turismo foi ótimo! A segurança de ter um seguro
-          viagem individual fez toda a diferença pra mim"
+        Passando pra agradecer pelo maravilhoso dia, ABC Turismo e equipe, sempre nos ofertando o melhor e sempre com algo mais. Meus pais amaram, não param de falar !❤💐🙏🏽
+
         </p>
       </div>
-      <div class="depo-txt" data-target="igor">
+      <div class="depo-txt" data-target="ana">
         <p>
-          "Adorei viajar com a ABC Turismo Pedagógico. Tive a oportunidade de
-          fazer uma tour por João Pessoa e tudo foi muito bem organizado e
-          seguro. Recomendo a todos!"
+        Boa noite, Grupo Gratidão por todas as pessoas que cruzaram o meu caminho hoje e por tudo o que me aconteceu para que ele fosse realmente especial. Obg Berg,  Sâmyla e Fernanda vcs são maravilhosos e atenciosos. Que Deus nos permita viver muitos outros momentos assim 🙌🏻. Fiquem na Paz e até a próxima
         </p>
       </div>
-      <div class="depo-txt" data-target="jp">
+      <div class="depo-txt" data-target="auricelia">
         <p>
-          "Já sou cliente da ABC Turismo há muitos anos, já proporcionou muitos
-          momentos inesquecíveis para mim e minha família, recomendo!"
+        Quero agradecer a Berg e as meninas da ABC turismo, passeio maravilhoso, valeu cada centavo que paguei, a minha primeira experiência ficou gravada, até o próximo passeio se Deus quiser.
+        </p>
+      </div>
+      <div class="depo-txt" data-target="israel">
+        <p>
+        Boa noite pessoal. Quero parabenizar mais uma vez à essa Grande pessoa, que é BERG . Por mais um passeio incrível, que vc nos proporcionou, e a essas duas jovens, Samyla e Fernanda por serem excelentes profissionais. Aqui fica minha Gratidão a ABC TURISMO.
+        </p>
+      </div>
+      <div class="depo-txt" data-target="soraia">
+        <p>
+        Bom dia! ABC turismo como sempre arrasando. Parabéns  a Bergue por conseguir tornar cada viagem em momentos inesquecíveis.  Parabéns a sua equipe,  sempre presente em atender todos! E por isso que ABC turismo  é referencia em confiança  e atendimento diferenciado a todos que escolhe viajar com eles! Arrasaram!
+        </p>
+      </div>
+      <div class="depo-txt" data-target="silvana">
+        <p>
+        A todos da ABC turismo, agradeço demais, por toda gentileza, profissionalismo dos serviços e a todo grupo que fez parte da meu primeiro bate volta com a empresa. Valeuuuuuuuuu!!!!!!✨💫🧳🚌✈🚍⛱🏜🏖🏕⛪🎑⛰✨🌹✨❤
+
+        </p>
+      </div>
+      <div class="depo-txt" data-target="aluizia">
+        <p>
+        Amei o passeio, conhecer novas pessoas, maravilhoso, Pureza café da manhã da manhã excelente, a fazenda São João Me emocionei com a banda de frevo em Ceará Mirim. Gosto muito de carnaval. A recepção da organização da excursão, parabéns.
         </p>
       </div>
     </article>
     <!-- FIM DE DEPOIMENTOS -->
 
     <!-- BLOG -->
-
     <?php include (TEMPLATEPATH . "/includes/blog-preview.php"); ?>
 
 <!-- FIM DO BLOG -->
