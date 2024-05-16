@@ -24,11 +24,9 @@
       <h1 class="titulo-laranja">RESERVE JÁ!</h1>
       <div id="crsl-pcts" class="carousel">
 
-      <?php
-// Consulta para obter os posts do tipo personalizado
-$args = array(
-    'post_type' => 'nossospacotes', // Substitua 'seu_tipo_de_post_personalizado' pelo nome do seu tipo de post personalizado
-    'posts_per_page' => 3, // Para recuperar todos os posts
+      <?php $args = array(
+    'post_type' => 'nossospacotes',
+    'posts_per_page' => 3,
 );
 
 $loop = new WP_Query( $args );
@@ -39,7 +37,11 @@ if ( $loop->have_posts() ) :
         <a href="<?php the_permalink(); ?>">
           <div class="pct-item">
             <h2><?php the_field('titulo_pacote'); ?></h2>
-            <img src="<?php the_field( 'img_pacote' ); ?>" alt="" />
+            <?php if ( has_post_thumbnail() ) :  ?>
+            <?php $thumb_id = get_post_thumbnail_id(); ?>
+            <?php $thumb_url = wp_get_attachment_image_src( $thumb_id, 'large' ); ?>
+            <img src="<?php echo esc_url( $thumb_url[0] ); ?>" alt="">
+        <?php endif; ?>
             <p class="a-partir-de">A partir de <strong><?php the_field( 'preco1' ); ?></strong></p>
             <p>
             <?php echo wp_trim_words( get_the_content(), 20, '...' ); ?>
@@ -49,7 +51,7 @@ if ( $loop->have_posts() ) :
         </a>
 
         <?php endwhile;
-    wp_reset_postdata(); // Restaura os dados do post
+    wp_reset_postdata();
 else : ?>
     <p><?php _e('Desculpe, nenhum post corresponde aos seus critérios.'); ?></p>
 <?php endif; ?>
@@ -59,46 +61,53 @@ else : ?>
     <!-- FIM DE RESERVE JÁ -->
 
     <!-- DEPOIMENTOS -->
-    <article id="depoimentos" data-group="depoimentos">
-      <h1 class="titulo-cinza-vazado">DEPOIMENTOS</h1>
-      <ul class="depoimentos">
+<article id="depoimentos" data-group="depoimentos">
+  <h1 class="titulo-cinza-vazado">DEPOIMENTOS</h1>
+  
+  <ul class="depoimentos">
+    <?php 
+    $args = array(
+        'post_type' => 'depoimentos',
+        'posts_per_page' => 10,
+        'post_status' => 'publish'
+    );
+    $depoimentos_query = new WP_Query($args);
+    if ($depoimentos_query->have_posts()) : 
+      while ($depoimentos_query->have_posts()) : $depoimentos_query->the_post(); ?>
+      <?php if (get_field('depoimento_img')): ?>
         <li>
-          <a href="" class="depo-foto" data-click="wil"><img
-              src="<?php echo get_stylesheet_directory_uri(); ?>/imgs/Wil.jpg" alt="" />Wil Silva</a>
+          <a href="<?php the_permalink(); ?>" class="depo-foto" data-click="<?php echo sanitize_title(get_the_title()); ?>">
+            <img src="<?php the_field('depoimento_img'); ?>" alt="<?php the_field('depoimento_nome'); ?>" />
+            <?php the_field('depoimento_nome'); ?>
+          </a>
         </li>
-        <li>
-          <a href="" class="depo-foto" data-click="igor"><img
-              src="<?php echo get_stylesheet_directory_uri(); ?>/imgs/Igor.jpg" alt="" />Igor Gomes</a>
-        </li>
-        <li>
-          <a href="" class="depo-foto" data-click="jp"><img src="<?php echo get_stylesheet_directory_uri(); ?>/imgs/JP.jpg"
-              alt="" />João Paulo</a>
-        </li>
-      </ul>
-      <div class="depo-txt" data-target="wil">
+        <?php endif; ?>
+      <?php endwhile; wp_reset_postdata(); ?>
+    <?php else : ?>
+      <p><?php _e('Nenhum depoimento encontrado', 'chaplin-child'); ?></p>
+    <?php endif; ?>
+  </ul>
+
+  <?php 
+  $depoimentos_query = new WP_Query($args);
+  if ($depoimentos_query->have_posts()) : 
+    while ($depoimentos_query->have_posts()) : $depoimentos_query->the_post(); ?>
+    <?php if (get_field('depoimento_texto')): ?>
+      <div class="depo-txt" data-target="<?php echo sanitize_title(get_the_title()); ?>">
         <p>
-          "Viajar com a ABC Turismo foi ótimo! A segurança de ter um seguro
-          viagem individual fez toda a diferença pra mim"
+          <?php the_field('depoimento_texto'); ?>
         </p>
+        <?php endif; ?>
       </div>
-      <div class="depo-txt" data-target="igor">
-        <p>
-          "Adorei viajar com a ABC Turismo Pedagógico. Tive a oportunidade de
-          fazer uma tour por João Pessoa e tudo foi muito bem organizado e
-          seguro. Recomendo a todos!"
-        </p>
-      </div>
-      <div class="depo-txt" data-target="jp">
-        <p>
-          "Já sou cliente da ABC Turismo há muitos anos, já proporcionou muitos
-          momentos inesquecíveis para mim e minha família, recomendo!"
-        </p>
-      </div>
-    </article>
-    <!-- FIM DE DEPOIMENTOS -->
+    <?php endwhile; wp_reset_postdata(); ?>
+  <?php else : ?>
+    <p><?php _e('Nenhum depoimento encontrado', 'chaplin-child'); ?></p>
+  <?php endif; ?>
+</article>
+<!-- FIM DE DEPOIMENTOS -->
+
 
     <!-- BLOG -->
-
     <?php include (TEMPLATEPATH . "/includes/blog-preview.php"); ?>
 
 <!-- FIM DO BLOG -->

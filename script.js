@@ -91,8 +91,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const nextBtn = document.querySelector(".nxt-btn");
   const content = document.querySelector("#carrossel-pcts");
 
-  const scrollAmount = 620; // Ajuste conforme necessário
-  const scrollSpeed = 500; // Ajuste conforme necessário
+  const scrollAmount = 620;
+  const scrollSpeed = 500;
 
   prevBtn.addEventListener("click", function () {
     content.scrollTo({
