@@ -68,7 +68,7 @@ else : ?>
     <?php 
     $args = array(
         'post_type' => 'depoimentos',
-        'posts_per_page' => 10,
+        'posts_per_page' => 20,
         'post_status' => 'publish'
     );
     $depoimentos_query = new WP_Query($args);
