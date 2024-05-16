@@ -61,84 +61,51 @@ else : ?>
     <!-- FIM DE RESERVE JÁ -->
 
     <!-- DEPOIMENTOS -->
-    <article id="depoimentos" data-group="depoimentos">
-      <h1 class="titulo-cinza-vazado">DEPOIMENTOS</h1>
-      <ul class="depoimentos">
+<article id="depoimentos" data-group="depoimentos">
+  <h1 class="titulo-cinza-vazado">DEPOIMENTOS</h1>
+  
+  <ul class="depoimentos">
+    <?php 
+    $args = array(
+        'post_type' => 'depoimentos',
+        'posts_per_page' => 10,
+        'post_status' => 'publish'
+    );
+    $depoimentos_query = new WP_Query($args);
+    if ($depoimentos_query->have_posts()) : 
+      while ($depoimentos_query->have_posts()) : $depoimentos_query->the_post(); ?>
+      <?php if (get_field('depoimento_img')): ?>
         <li>
-          <a href="" class="depo-foto" data-click="soraia"><img
-              src="<?php echo get_stylesheet_directory_uri(); ?>/imgs/soraia marrocos.jpg" alt="" />Soraia Marrocos</a>
+          <a href="<?php the_permalink(); ?>" class="depo-foto" data-click="<?php echo sanitize_title(get_the_title()); ?>">
+            <img src="<?php the_field('depoimento_img'); ?>" alt="<?php the_field('depoimento_nome'); ?>" />
+            <?php the_field('depoimento_nome'); ?>
+          </a>
         </li>
-        
-        <li>
-          <a href="" class="depo-foto" data-click="silvana"><img
-              src="<?php echo get_stylesheet_directory_uri(); ?>/imgs/silvana.jpg" alt="" />Silvana França</a>
-        </li>
+        <?php endif; ?>
+      <?php endwhile; wp_reset_postdata(); ?>
+    <?php else : ?>
+      <p><?php _e('Nenhum depoimento encontrado', 'chaplin-child'); ?></p>
+    <?php endif; ?>
+  </ul>
 
-        <li>
-          <a href="" class="depo-foto" data-click="aluizia"><img src="<?php echo get_stylesheet_directory_uri(); ?>/imgs/aluizia freire.jpg"
-              alt="" />Aluizia Freire</a>
-        </li>
-
-        <li>
-          <a href="" class="depo-foto" data-click="leticia"><img src="<?php echo get_stylesheet_directory_uri(); ?>/imgs/leticia ferreira.jpg"
-              alt="" />Leticia Ferreira</a>
-        </li>
-
-        <li>
-          <a href="" class="depo-foto" data-click="ana"><img src="<?php echo get_stylesheet_directory_uri(); ?>/imgs/ana cassia.jpg"
-              alt="" />Ana Cassia</a>
-        </li>
-
-        <li>
-          <a href="" class="depo-foto" data-click="auricelia"><img src="<?php echo get_stylesheet_directory_uri(); ?>/imgs/auricelia melo.jpg"
-              alt="" />Auricelia Melo</a>
-        </li>
-
-        <li>
-          <a href="" class="depo-foto" data-click="israel"><img src="<?php echo get_stylesheet_directory_uri(); ?>/imgs/israel de souza.jpg"
-              alt="" />Israel de Souza</a>
-        </li>
-
-      </ul>
-      <div class="depo-txt" data-target="leticia">
+  <?php 
+  $depoimentos_query = new WP_Query($args);
+  if ($depoimentos_query->have_posts()) : 
+    while ($depoimentos_query->have_posts()) : $depoimentos_query->the_post(); ?>
+    <?php if (get_field('depoimento_texto')): ?>
+      <div class="depo-txt" data-target="<?php echo sanitize_title(get_the_title()); ?>">
         <p>
-        Passando pra agradecer pelo maravilhoso dia, ABC Turismo e equipe, sempre nos ofertando o melhor e sempre com algo mais. Meus pais amaram, não param de falar !❤💐🙏🏽
+          <?php the_field('depoimento_texto'); ?>
+        </p>
+        <?php endif; ?>
+      </div>
+    <?php endwhile; wp_reset_postdata(); ?>
+  <?php else : ?>
+    <p><?php _e('Nenhum depoimento encontrado', 'chaplin-child'); ?></p>
+  <?php endif; ?>
+</article>
+<!-- FIM DE DEPOIMENTOS -->
 
-        </p>
-      </div>
-      <div class="depo-txt" data-target="ana">
-        <p>
-        Boa noite, Grupo Gratidão por todas as pessoas que cruzaram o meu caminho hoje e por tudo o que me aconteceu para que ele fosse realmente especial. Obg Berg,  Sâmyla e Fernanda vcs são maravilhosos e atenciosos. Que Deus nos permita viver muitos outros momentos assim 🙌🏻. Fiquem na Paz e até a próxima
-        </p>
-      </div>
-      <div class="depo-txt" data-target="auricelia">
-        <p>
-        Quero agradecer a Berg e as meninas da ABC turismo, passeio maravilhoso, valeu cada centavo que paguei, a minha primeira experiência ficou gravada, até o próximo passeio se Deus quiser.
-        </p>
-      </div>
-      <div class="depo-txt" data-target="israel">
-        <p>
-        Boa noite pessoal. Quero parabenizar mais uma vez à essa Grande pessoa, que é BERG . Por mais um passeio incrível, que vc nos proporcionou, e a essas duas jovens, Samyla e Fernanda por serem excelentes profissionais. Aqui fica minha Gratidão a ABC TURISMO.
-        </p>
-      </div>
-      <div class="depo-txt" data-target="soraia">
-        <p>
-        Bom dia! ABC turismo como sempre arrasando. Parabéns  a Bergue por conseguir tornar cada viagem em momentos inesquecíveis.  Parabéns a sua equipe,  sempre presente em atender todos! E por isso que ABC turismo  é referencia em confiança  e atendimento diferenciado a todos que escolhe viajar com eles! Arrasaram!
-        </p>
-      </div>
-      <div class="depo-txt" data-target="silvana">
-        <p>
-        A todos da ABC turismo, agradeço demais, por toda gentileza, profissionalismo dos serviços e a todo grupo que fez parte da meu primeiro bate volta com a empresa. Valeuuuuuuuuu!!!!!!✨💫🧳🚌✈🚍⛱🏜🏖🏕⛪🎑⛰✨🌹✨❤
-
-        </p>
-      </div>
-      <div class="depo-txt" data-target="aluizia">
-        <p>
-        Amei o passeio, conhecer novas pessoas, maravilhoso, Pureza café da manhã da manhã excelente, a fazenda São João Me emocionei com a banda de frevo em Ceará Mirim. Gosto muito de carnaval. A recepção da organização da excursão, parabéns.
-        </p>
-      </div>
-    </article>
-    <!-- FIM DE DEPOIMENTOS -->
 
     <!-- BLOG -->
     <?php include (TEMPLATEPATH . "/includes/blog-preview.php"); ?>
