@@ -34,10 +34,9 @@ function get_new_posts_callback() {
   die();
 }
 
-/* Adiciona um novo custom post type */
-function add_cpt() { 
+// CPT PACOTES
+function add_cpt_pacotes() { 
 
-    /* Informa os nomes que serão exibidos na dashboard do WordPress */
     $labels = [
         "name" => __( "Nossos Pacotes", "chaplin-child" ),
         "singular_name" => __( "Nossos Pacotes", "chaplin-child" ),
@@ -45,7 +44,6 @@ function add_cpt() {
         "all_items" => __( "Todos os itens", "chaplin-child" ),
     ];
 
-    /* Informa os argumentos do custom post type */
     $args = [
         "label" => __( "Nossospacotes", "chaplin-child" ),
         "labels" => $labels,
@@ -61,11 +59,37 @@ function add_cpt() {
         "supports" => [ "title", "editor", "thumbnail", "excerpt", "comments", "revisions", "author", "page-attributes", "post-formats" ],
     ];
 
-    /* Registra o custom post type */
     register_post_type( "nossospacotes", $args );
 }
+add_action( 'init', 'add_cpt_pacotes' );
 
-/* Adiciona a função que acabou de ser criada */
-add_action( 'init', 'add_cpt' );
+// CPT DEPOIMENTOS
+function add_cpt_depoimentos() { 
+
+  $labels = [
+      "name" => __( "Depoimentos", "chaplin-child" ),
+      "singular_name" => __( "Depoimento", "chaplin-child" ),
+      "menu_name" => __( "Depoimentos", "chaplin-child" ),
+      "all_items" => __( "Todos os itens", "chaplin-child" ),
+  ];
+
+  $args = [
+      "label" => __( "Depoimentos", "chaplin-child" ),
+      "labels" => $labels,
+      "description" => "Nossos depoimentos disponíveis.",
+      "public" => true,
+         "has_archive" => true,
+      "show_in_menu" => true,
+      "delete_with_user" => false,
+      "exclude_from_search" => false,
+      "hierarchical" => false,
+      "rewrite" => [ "slug" => "depoimentos", "with_front" => true ],
+      "menu_icon" => "dashicons-text-page",
+      "supports" => [ "title", "editor", "thumbnail", "excerpt", "comments", "revisions", "author", "page-attributes", "post-formats" ],
+  ];
+
+  register_post_type( "depoimentos", $args );
+}
+add_action( 'init', 'add_cpt_depoimentos' );
 
 ?>

@@ -32,7 +32,7 @@
 
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>    
 
-    <article class="pct-principal">
+    <article class="pct-principal cntt-pacote">
 
     <h1 class="titulo-laranja"><?php the_title(); ?></h1>
     <div class="container-principal">
