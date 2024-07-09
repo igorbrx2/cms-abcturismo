@@ -45,7 +45,7 @@
       <div class="post-card">
         <a href="<?php the_permalink(); ?>">
           <div class="post-card-img">
-            <?php the_post_thumbnail('thumbnail'); ?>
+            <?php the_post_thumbnail('full'); ?>
           </div>
           <h2><?php the_title(); ?></h2>
           <p><?php echo wp_trim_words(get_the_excerpt(), 30); ?></p>
